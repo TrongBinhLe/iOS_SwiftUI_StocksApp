@@ -31,13 +31,15 @@ struct ContentView: View {
                     .fontWeight(.bold)
                     .foregroundColor(Color.gray)
                     .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 0))
-                    .offset(y: -330)
+                    .offset(y: -320)
                 SearchView(searchTerm: $stockListVM.searchTerm)
                     .offset(
-                        y: -280
+                        y: -260
                     )
                 StockListView(stocks: filteredStocks)
-                    .offset(y: 100)
+                    .offset(y: 200)
+                NewsArticleView(newsArticles: self.stockListVM.news)
+                    .offset(y: 500)
                 
             }
             .navigationBarTitle("Stocks")
