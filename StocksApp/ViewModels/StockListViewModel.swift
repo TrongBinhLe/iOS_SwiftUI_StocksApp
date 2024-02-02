@@ -12,6 +12,7 @@ class StockListViewModel: ObservableObject{
     @Published var searchTerm: String = ""
     @Published var stocks: [StockViewModel] = [StockViewModel]()
     @Published var news: [NewsArticleViewModel] = [NewsArticleViewModel]()
+    @Published var dragOffset: CGSize = CGSize(width: 0, height: 680)
     
     func load() {
         fetchNews()
